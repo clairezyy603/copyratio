@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.bam
+*.bai
+*.bwt
+*.pac
+*.sa
+*.amb
+*.ann
+*.tsv
+!examples/*.tsv
+.DS_Store

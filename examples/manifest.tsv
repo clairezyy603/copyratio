@@ -1,0 +1,5 @@
+sample	r1	r2	host
+ASMA-1664	reads/ASMA-1664_R1.fastq.gz	reads/ASMA-1664_R2.fastq.gz	assemblies/ASMA-1664.fna
+ASMA-1632	reads/ASMA-1632_R1.fastq.gz	reads/ASMA-1632_R2.fastq.gz	assemblies/ASMA-1632.fna
+ASMA-1662	reads/ASMA-1662_R1.fastq.gz	reads/ASMA-1662_R2.fastq.gz	assemblies/ASMA-1662.fna
+ASMA-1667	reads/ASMA-1667_R1.fastq.gz	reads/ASMA-1667_R2.fastq.gz	assemblies/ASMA-1667.fna
