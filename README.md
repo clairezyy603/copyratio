@@ -47,7 +47,7 @@ when the same reads are mapped to the same cell's own genome.
 ## Install
 
 ```bash
-git clone https://github.com/USERNAME/copyratio.git
+git clone https://github.com/clairezyy603/copyratio.git
 cd copyratio
 chmod +x copyratio.py
 ```
@@ -134,6 +134,18 @@ copy number, not a loose plasmid.
 if the assembly represents that isolate's genome. A heavily contaminated
 assembly contains the contaminant too, which drags the denominator in the wrong
 direction. Check your host assemblies first.
+
+How much this matters, using ASMA-1664 from the example above — same reads,
+same element, two different assemblies of the same isolate as the denominator:
+
+| host assembly | size | host depth | ratio |
+| --- | --- | --- | --- |
+| short-read (carries the contaminating sequence) | 5.5 Mb | 71.7x | 0.071 |
+| long-read hybrid (clean) | 2.4 Mb | 156.4x | 0.032 |
+
+The contaminated assembly is twice the size it should be, so depth across it
+halves and the ratio doubles — biased toward calling carriage. Here the call
+survives either way, but a marginal case would not.
 
 **It is unreliable at low depth.** Below roughly 10× on the host, the ratio
 swings on a handful of reads. `--min-host-depth` enforces this.
